@@ -1,0 +1,62 @@
+<h1 id="llvm-clang-and-webassembly">LLVM, clang, and WebAssembly</h1>
+<p>Following a <a href="https://surma.dev/things/c-to-webassembly/">blog
+post</a> by <a href="surma@surmair.de">Alexander Surma</a>.</p>
+<h2 id="installers-and-tools">Installers and tools</h2>
+<ul>
+<li><a
+href="https://github.com/llvm/llvm-project/releases/download/llvmorg-18.1.8/clang+llvm-18.1.8-x86_64-pc-windows-msvc.tar.xz">clang+LLVM</a></li>
+<li><a
+href="https://github.com/WebAssembly/wabt/releases/download/1.0.36/wabt-1.0.36-windows.tar.gz">WebAssembly
+Binary Toolkit</a></li>
+<li><a
+href="https://www.python.org/ftp/python/3.13.1/python-3.13.1-amd64.exe">Python</a>
+for running a simple webserver</li>
+</ul>
+<p>Tools used on the command line:</p>
+<ul>
+<li><code>clang</code> – front end compiler that turns C into IR</li>
+<li><code>llc</code> – back end compiler that turns IR into the target
+executable type</li>
+<li><code>lld</code> – LLVM linker</li>
+<li><code>wasm-ld</code> – LLVM linker specific for WASM targets</li>
+<li><code>wasm2wat</code> – “Read a file in the WebAssembly binary
+format, and convert it to the WebAssembly text format”</li>
+<li><code>llvm-mc</code> – “LLVM machine code playground”</li>
+<li><code>wasm-objdump</code> – “print information about the contents of
+Wasm binaries”</li>
+</ul>
+<h2 id="definitions">Definitions</h2>
+<table>
+<colgroup>
+<col style="width: 19%" />
+<col style="width: 80%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">LLVM</td>
+<td style="text-align: left;">Low level virtual machine</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">clang</td>
+<td style="text-align: left;">C language front-end for LLVM. It compiles
+C to LLVM intermediate representation</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">IR</td>
+<td style="text-align: left;">Intermediate representation</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">WAT</td>
+<td style="text-align: left;">WebAssembly Text</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">wabt</td>
+<td style="text-align: left;">WebAssembly Binary Toolkit</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">WebAssembly, Wasm</td>
+<td style="text-align: left;">“a binary instruction format for a
+stack-based virtual machine” – webassembly.org</td>
+</tr>
+</tbody>
+</table>
