@@ -29,24 +29,17 @@ Tools used on the command line:
 
 ## Definitions
 
-LLVM
-: Low level virtual machine
-
-clang
-: C language front-end for LLVM.
-: It compiles C to LLVM intermediate representation.
-
-IR
-: intermediate representation
-
-WAT
-: WebAssembly Text
-
-wabt
-: WebAssembly Binary Toolkit
-
-WebAssembly, Wasm
-: "a binary instruction format for a stack-based virtual machine" -- webassembly.org
-
-
++:-------------------+:------------------------------------------------------------------------------------+
+| LLVM               | Low level virtual machine                                                           | 
++--------------------+-------------------------------------------------------------------------------------+ 
+| clang              | C language front-end for LLVM.  It compiles C to LLVM intermediate representation   | 
++--------------------+-------------------------------------------------------------------------------------+ 
+| IR                 | Intermediate representation                                                         | 
++--------------------+-------------------------------------------------------------------------------------+ 
+| WAT                | WebAssembly Text                                                                    | 
++--------------------+-------------------------------------------------------------------------------------+ 
+| wabt               | WebAssembly Binary Toolkit                                                          | 
++--------------------+-------------------------------------------------------------------------------------+ 
+| WebAssembly, Wasm  | "a binary instruction format for a stack-based virtual machine" -- webassembly.org  | 
++--------------------+-------------------------------------------------------------------------------------+ 
 
