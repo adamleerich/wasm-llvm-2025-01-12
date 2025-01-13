@@ -3,7 +3,7 @@
 <script type="module">
   async function init() {
     const { instance } = await WebAssembly.instantiateStreaming(
-      fetch("./add.wasm")
+      fetch("./malloc2.wasm")
     );
 
     const jsArray = [1, 1, 1, 1, 1];
