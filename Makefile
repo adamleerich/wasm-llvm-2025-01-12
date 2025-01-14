@@ -3,14 +3,14 @@
 .PRECIOUS: %.ll %.o %.s  # Prevent deletion of intermediate files
 
 # Comments
-#   .ll      LLVM IR (Intermediate Representation)
-#   .s       WebAssembly Assembly Code
-#   .o       WebAssembly Object File
-#   .wasm    Final WebAssembly Module
+#   .ll      LLVM Intermediate Representation (text)
+#   .s       WebAssembly Assembly Code (text)
+#   .o       WebAssembly Object File (binary)
+#   .wasm    Final WebAssembly Module (binary)
 
 
 %.ll: %.c
-	clang --target=wasm32 -O3 -flto -S -emit-llvm -o $@ $<
+	clang --target=wasm32 -nostdlib -O3 -flto -S -emit-llvm -o $@ $<
 
 %.s: %.ll
 	llc -march=wasm32 -O3 -filetype=asm -o $@ $<

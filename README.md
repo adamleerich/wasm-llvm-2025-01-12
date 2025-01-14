@@ -33,3 +33,29 @@ Following a [blog post][post] by [Alexander Surma][email].
 | `wasm-objdump`     | print information about the contents of Wasm binaries                                        | 
 | WAT                | WebAssembly Text                                                                             | 
 | WebAssembly, Wasm  | "a binary instruction format for a stack-based virtual machine" -- webassembly.org           | 
+
+
+## Notes on some command line flags
+
+
+```txt
+clang 
+    --target=wasm32          # Targets the WebAssembly 32-bit architecture
+    -O3                      # Highest optimization level
+    -flto                    # Add metadata for link-time optimizations
+    -nostdlib                # Don’t try and link against a standard library
+    -S                       # State selection = preprocessor + parse + semantic analysis + LLVM generation
+    -emit-llvm               # Generates LLVM intermediate language assembly files (_.ll_, text)
+    
+llc 
+    -march=wasm32            # Targets the WebAssembly 32-bit architecture
+    -O3                      # Highest optimization level
+    -filetype=obj            # Create an object file (_.o_, binary)
+    -filetype=asm            # Create a Wasm "assembler" file (_.s_, text)
+
+wasm-ld 
+    --no-entry               # No main function
+    --export-all             # Export everything
+    --lto-O3                 # Highest link-time optimization level
+    -z stack-size=8388608    # Set maximum stack size to 8mb
+```
