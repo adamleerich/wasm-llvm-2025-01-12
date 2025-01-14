@@ -3,10 +3,10 @@
 .PRECIOUS: %.ll %.o %.s  # Prevent deletion of intermediate files
 
 # Comments
-#   .ll		LLVM IR (Intermediate Representation)
-#   .s		WebAssembly Assembly Code
-#	.o		WebAssembly Object File
-#   .wasm	Final WebAssembly Module
+#   .ll      LLVM IR (Intermediate Representation)
+#   .s       WebAssembly Assembly Code
+#   .o       WebAssembly Object File
+#   .wasm    Final WebAssembly Module
 
 
 %.ll: %.c
