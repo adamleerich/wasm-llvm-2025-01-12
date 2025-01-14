@@ -5,7 +5,7 @@ Following a [blog post][post] by [Alexander Surma][email].
 [post]: https://surma.dev/things/c-to-webassembly/
 [email]: surma@surmair.de
 
-## Installers and tools
+## Installers
 
 * [clang+LLVM][1]
 * [WebAssembly Binary Toolkit][2]
@@ -15,31 +15,21 @@ Following a [blog post][post] by [Alexander Surma][email].
 [2]: https://github.com/WebAssembly/wabt/releases/download/1.0.36/wabt-1.0.36-windows.tar.gz
 [3]: https://www.python.org/ftp/python/3.13.1/python-3.13.1-amd64.exe
 
-Tools used on the command line:
-
-* `clang` -- front end compiler that turns C into IR
-* `llc` -- back end compiler that turns IR into the target executable type
-* `lld` -- LLVM linker
-* `wasm-ld` -- LLVM linker specific for WASM targets
-* `wasm2wat` -- "Read a file in the WebAssembly binary format, and convert it to the WebAssembly text format"
-* `llvm-mc` -- "LLVM machine code playground"
-* `wasm-objdump` -- "print information about the contents of Wasm binaries"
 
 
+## Definitions and Tools
 
-## Definitions
-
-+:-------------------+:------------------------------------------------------------------------------------+
-| LLVM               | Low level virtual machine                                                           | 
-+--------------------+-------------------------------------------------------------------------------------+ 
-| clang              | C language front-end for LLVM.  It compiles C to LLVM intermediate representation   | 
-+--------------------+-------------------------------------------------------------------------------------+ 
-| IR                 | Intermediate representation                                                         | 
-+--------------------+-------------------------------------------------------------------------------------+ 
-| WAT                | WebAssembly Text                                                                    | 
-+--------------------+-------------------------------------------------------------------------------------+ 
-| wabt               | WebAssembly Binary Toolkit                                                          | 
-+--------------------+-------------------------------------------------------------------------------------+ 
-| WebAssembly, Wasm  | "a binary instruction format for a stack-based virtual machine" -- webassembly.org  | 
-+--------------------+-------------------------------------------------------------------------------------+ 
-
+| Thing              | Meaning                                                                                      | 
+|--------------------|----------------------------------------------------------------------------------------------| 
+| `clang`            | C language front-end for LLVM.  It compiles C to LLVM intermediate representation            | 
+| IR                 | Intermediate representation                                                                  | 
+| `llc`              | back end compiler that turns IR into the target executable type                              | 
+| `lld`              | LLVM linker                                                                                  | 
+| LLVM               | Low level virtual machine                                                                    | 
+| `llvm-mc`          | LLVM machine code playground                                                                 | 
+| wabt               | WebAssembly Binary Toolkit                                                                   | 
+| `wasm2wat`         | Read a file in the WebAssembly binary format, and convert it to the WebAssembly text format  | 
+| `wasm-ld`          | LLVM linker specific for WASM targets                                                        | 
+| `wasm-objdump`     | print information about the contents of Wasm binaries                                        | 
+| WAT                | WebAssembly Text                                                                             | 
+| WebAssembly, Wasm  | "a binary instruction format for a stack-based virtual machine" -- webassembly.org           | 
